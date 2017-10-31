@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html dir="lrt">
+
+<head>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
+  <title>Reservation</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
+  <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+  <script src="https://cdn.rawgit.com/mdehoog/Semantic-UI-Calendar/76959c6f7d33a527b49be76789e984a0a407350b/dist/calendar.min.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css?v=5293" />
+</head>
+
+<body>
+  <form class="form">
+    <div class="ui container">
+      <div class="ui stackable grid">
+        <div class="two column row">
+          <div class="column centered">
+            <h1 class="ui header">Jun Park QA</h1>
+            <p>2202 N IRVING STREET, ALLENTOWN, PA 18109</p>
+            <P>PHONE: (800)201-0461</P>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="two column row first">
+          <div class="column centered reservation">
+            <h1 class="ui header">Make a <span class="boldTxt">Reservation!</span></h1>
+            <p>Select the party size, date and time for your reservation.</p>
+          </div>
+        </div>
+        <div class="six column row centered first">
+          <div class="field column">
+            <label>Party Size</label>
+            <div class="ui selection dropdown">
+              <input class="partySize" type="hidden" name="party">
+              <i class="dropdown icon"></i>
+              <div class="default text"></div>
+              <div class="menu">
+                <div class="item" data-value="1" data-text="1">1</div>
+                <div class="item" data-value="2" data-text="2">2</div>
+                <div class="item" data-value="3" data-text="3">3</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field column">
+            <label>Date</label>
+            <div class="ui calendar" id="calendar">
+              <div class="ui input right icon">
+                <i class="calendar icon"></i>
+                <input class="calendar" type="text" placeholder="Select Date">
+              </div>
+            </div>
+          </div>
+
+          <div class="field column">
+            <label>Time</label>
+            <div id="time">
+              <div class="ui input right icon">
+                <i class="time icon"></i>
+                <input class="time" type="text" placeholder="Select Time">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="two column row first">
+          <div class="column centered reservation">
+            <button class="fluid ui button btn-first">Check Availability</button>
+          </div>
+        </div>
+        <div class="two column row first">
+          <div class="column centered reservation">
+            <p>Groups larger than 30 should call at <span class="boldTxt">(800)201-0461</span> for reservations.</p>
+            <p>All time displayed in EST timezone.</p>
+          </div>
+        </div>
+
+        <div class="two column row second">
+          <div class="column centered reservation">
+            <h1 class="ui header">Table <span class="boldTxt">Available!</span></h1>
+            <p>Complete your reservation.</p>
+          </div>
+        </div>
+        <div class="four column row centered second">
+          <div class="field column">
+            <label>First Name</label>
+            <div class="ui input full">
+              <input class="firstName" type="text" placeholder="Enter First Name">
+            </div>
+          </div>
+          <div class="field column">
+            <label>Last Name</label>
+            <div class="ui input full">
+              <input class="lastName" type="text" placeholder="Enter Last Name">
+            </div>
+          </div>
+        </div>
+        <div class="two column row centered second">
+          <div class="field column">
+            <label>Email</label>
+            <div class="ui input full">
+              <input class="email" type="text" placeholder="Type email">
+            </div>
+          </div>
+        </div>
+        <div class="six column row centered second">
+          <div class="field column">
+            <label>Phone Type</label>
+            <div class="ui selection dropdown">
+              <input type="hidden" name="number">
+              <i class="dropdown icon"></i>
+              <div class="default text"></div>
+              <div class="menu">
+                <div class="item" data-value="Cell" data-text="Cell">Cell</div>
+                <div class="item" data-value="Home" data-text="Home">Home</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field column">
+            <label>Phone Number</label>
+            <div class="ui input">
+              <input class="phoneNumber" type="text" placeholder="Type...">
+            </div>
+          </div>
+
+          <div class="field column">
+            <label>Notification</label>
+            <div class="ui selection dropdown">
+              <input type="hidden" name="notification">
+              <i class="dropdown icon"></i>
+              <div class="default text"></div>
+              <div class="menu">
+                <div class="item" data-value="Cell" data-text="Text">Text</div>
+                <div class="item" data-value="Home" data-text="Voice Mail">Voice</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="two column row centered second">
+          <div class="field column">
+            <label>Special Requirements</label>
+            <div class="field">
+              <textarea class=SpecReq></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="two column row second">
+          <div class="column centered reservation">
+            <p>Reservation Details:</p>
+          </div>
+        </div>
+        <div class="eight column row centered second">
+          <div class="field column">
+            <div>Date</div>
+            <div class="showDate"></div>
+          </div>
+
+          <div class="field column">
+            <div>Time</div>
+            <div class="showTime"></div>
+          </div>
+
+          <div class="field column">
+            <div class="field column">
+              <div>Party of</div>
+              <i class="user icon"></i>
+              <div class="showParty"></div>
+            </div>
+          </div>
+          <div class="field column">
+            <button class="ui inverted basic button">Edit</button>
+          </div>
+        </div>
+        <div class="two column row second">
+          <div class="column centered reservation">
+            <button class="fluid ui button confirmRes">Confirm Reservation</button>
+          </div>
+        </div>
+        <div class="two column row second">
+          <div class="column centered reservation">
+            <p>Groups larger than 30 should call at <span class="boldTxt">(800)201-0461</span> for reservations.</p>
+            <p>All time displayed in EST timezone.</p>
+          </div>
+        </div>
+
+        <div class="two column row result">
+          <div class="column centered reservation">
+            <h1 class="ui header">Reservation <span class="boldTxt">Confirmed!</span></h1>
+          </div>
+        </div>
+
+        <div class="two column row result">
+          <div class="column centered reservation">
+            <p>Reservation Details:</p>
+          </div>
+        </div>
+
+        <div class="eight column row centered result">
+          <div class="field column">
+            <div class="field column">
+              <div>Party of</div>
+              <div class="showParty"></div>
+            </div>
+          </div>
+          <div class="field column">
+            <div>Date</div>
+            <div class="showDate"></div>
+          </div>
+          <div class="field column">
+            <div>Time</div>
+            <div class="showTime"></div>
+          </div>
+        </div>
+        <div class="two column row result">
+          <div class="column centered reservation">
+            <p>Your Information:</p>
+          </div>
+        </div>
+        <div class="two column row result">
+          <div class="column centered">
+            <p class="resInfo forName"></p>
+            <p class="resInfo forEmail"></p>
+            <p class="resInfo forPhone"></p>
+            <p class="resInfo">Special requirement:</p>
+            <p class="resInfo forReq"></p>
+          </div>
+        </div>
+        <div class="one column row bottom">
+          <p>Poweder by <span class="boldTxt">Harbortouch. <span>Ⓒ</span></span></p>
+        </div>
+      </div>
+
+
+    </div>
+  </form>
+
+    <script type="text/javascript" src="app.js?v=5293"></script>
+</body>
+
+</html>
