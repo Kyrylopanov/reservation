@@ -133,9 +133,9 @@ h1.ui.header {
 }
 
 .ui.selection.dropdown.notValid, .calendar.notValid, .time.notValid, input.firstName.notValid, input.lastName.notValid, input.email.notValid, input.phoneNumber.notValid, textarea.SpecReq.notValid {
-  background: #fff6f6 !important;
-  border-color: #e0b4b4 !important;
-  color: #9f3a38 !important;
+  background: #ffdcdc !important;
+  border-color: #cc6363 !important;
+  color: #962c2a !important;
 }
 
 .showParty {
